@@ -524,6 +524,7 @@ footer div h1 {
     flex-direction: row;
     gap: 80px;
     margin-top: 80px;
+    width: auto;
   }
 
   .frase {
