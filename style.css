@@ -32,7 +32,7 @@ html {
 
 body {
   overflow-x: auto;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 /*---------------------------------------------*/
@@ -43,13 +43,13 @@ header {
   position: fixed;
   width: 100%;
   padding: 10px 20px 10px 20px;
-  background-color: var(--verde);
+  background-color: var(--verde-escuro);
   color: var(--branco);
   z-index: 100;
 }
 
 .nomeProjeto {
-  font-size: 10px;
+  font-size: clamp(5px, 2vw, 10px);
   width: 50%;
   display: flex;
   justify-content: flex-start;
@@ -58,7 +58,7 @@ header {
 
 .opções {
   width: 50%;
-  font-size: 15px;
+  font-size: clamp(10px, 3vw, 15px);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -109,7 +109,7 @@ header {
 }
 
 .titulo h1 {
-  font-size: 40px;
+  font-size: clamp(24px, 6vw, 40px);
 }
 
 #subtitulo {
@@ -121,7 +121,7 @@ header {
   margin: 0 auto;
   width: 30%;
   padding: 5px;
-  background-color: var(--verde);
+  background-color: var(--verde-escuro);
   border: none;
   border-radius: 20px;
 }
@@ -194,7 +194,7 @@ header {
 }
 
 .listaDescarte ul li {
-  font-size: 20px;
+  font-size: clamp(10px, 5vw, 20px);
   font-weight: 600;
   letter-spacing: 0px;
   font-family: 'Playfair Display', serif;
@@ -210,11 +210,12 @@ header {
   display: flex;
   justify-content: flex-end;
   text-align: end;
+  margin-bottom: 30px;
 }
 
 .tituloColeta h1 {
   letter-spacing: 0px;
-  font-size: 34px;
+  font-size: clamp(30px, 5vw, 34px);
 }
 
 .subtituloColeta {
@@ -225,7 +226,7 @@ header {
 
 .subtituloColeta h1 {
   width: 50%;
-  font-size: 34px;
+  font-size: clamp(30px, 5vw, 34px);
   letter-spacing: 0px;
 }
 
@@ -241,8 +242,11 @@ header {
 
 .card {
   flex: 1 1 300px;
-  max-width: 370px;
-  min-height: 320px;
+  width: 100%;
+
+  max-width: 350px;
+
+  aspect-ratio: 1 / 1;
   border-radius: 20px;
   background-color: var(--verde);
   padding: 20px;
@@ -255,7 +259,7 @@ header {
 .card h1 {
   letter-spacing: 0px;
   margin-bottom: 10px;
-  font-size: clamp(26px, 2vw, 28px);
+  font-size: clamp(20px, 5vw, 28px);
 }
 
 .card hr {
@@ -266,7 +270,7 @@ header {
   font-weight: 600;
   letter-spacing: 0px;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(24px, 2vw, 22px);
+  font-size: clamp(14px, 10vw, 24px);
   margin-top: 15px;
   line-height: 1.5;
 }
@@ -288,6 +292,7 @@ header {
 }
 
 .frase h1 {
+  font-size: clamp(28px, 5vw, 30px);
   font-weight: 900;
   letter-spacing: 1px;
 }
