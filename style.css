@@ -522,6 +522,7 @@ footer div h1 {
 
   .containerColetaCards {
     flex-direction: row;
+    flex-wrap: nowrap;
     gap: 80px;
     margin-top: 80px;
     width: auto;
