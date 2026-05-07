@@ -30,6 +30,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: auto;
+  min-width: 350px;
+}
+
 /*---------------------------------------------*/
 
 header {
@@ -72,7 +77,8 @@ header {
 #inicio {
   padding-top: 280px;
   background-color: rgb(0, 0, 0);
-  height: 90vh;
+  min-height: 738px;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -85,7 +91,8 @@ header {
   background-position: center;
   opacity: 0.2;
   filter: grayscale(100%);
-  height: 90vh;
+  height: 100vh;
+  min-height: 738px;
   z-index: 0;
 }
 
@@ -223,21 +230,21 @@ header {
 }
 
 .containerColetaCards {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 30px;
+  width: 90%;
 }
 
 .card {
+  flex: 1 1 300px;
+  max-width: 370px;
+  min-height: 320px;
   border-radius: 20px;
   background-color: var(--verde);
-  width: 320px;
-  height: 320px;
-  max-width: 370px;
   padding: 20px;
   text-align: center;
   color: var(--branco);
@@ -248,6 +255,7 @@ header {
 .card h1 {
   letter-spacing: 0px;
   margin-bottom: 10px;
+  font-size: clamp(20px, 2vw, 28px);
 }
 
 .card hr {
@@ -258,15 +266,14 @@ header {
   font-weight: 600;
   letter-spacing: 0px;
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-top: 10px;
+  font-size: clamp(16px, 2vw, 22px);
+  margin-top: 15px;
+  line-height: 1.5;
 }
 
 .card:hover {
   box-shadow: 0 5px 40px #000000d0;
-  transition: all 0.2s ease;
-  transform: scale(1.1);
-  transform: translateY(-10px);
+  transform: scale(1.03) translateY(-10px);
 }
 
 /*---------------------------------------------*/
@@ -293,17 +300,21 @@ footer {
 
 footer div {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  flex-wrap: wrap;
 }
 
 footer div h1 {
-  font-size: 12px;
-  width: 33.33%;
+  font-size: clamp(10px, 2vw, 14px);
+  letter-spacing: 1px;
+  flex: 1;
 }
 
 #descarteFooter {
-  text-align: start;
+  text-align: left;
 }
 
 #projeto {
@@ -311,7 +322,7 @@ footer div h1 {
 }
 
 #ano {
-  text-align: end;
+  text-align: right;
 }
 
 /*----------------Waves Container----------------*/
