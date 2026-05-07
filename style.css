@@ -419,12 +419,13 @@ footer div h1 {
   }
 
   #inicio {
-    height: 100vh;
+    height: auto;
     padding-top: 200px;
+    padding-bottom: 300px;
   }
 
   .fundo {
-    height: 100vh;
+    height: auto;
   }
 
   .titulo h1 {
