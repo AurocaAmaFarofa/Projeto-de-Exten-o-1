@@ -1,0 +1,558 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --verde-claro: #8bd3a2;
+  --verde: #4fa86b;
+  --verde-medio: #3d6e4d;
+  --verde-escuro: #365a42;
+  --verde-muito-escuro: #1e3024;
+  --branco: white;
+  --preto: black;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 5px;
+  /*font-style: italic;*/
+  text-transform: uppercase;
+}
+
+.italico {
+  font-style: italic;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------------------------------------------*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--verde);
+  color: var(--branco);
+  z-index: 100;
+}
+
+.nomeProjeto {
+  font-size: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.opções {
+  width: 50%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: end;
+}
+
+.opções a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--branco);
+}
+
+/*---------------------------------------------*/
+
+#inicio {
+  padding-top: 280px;
+  background-color: rgb(0, 0, 0);
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.fundo {
+  background-image: url('https://www.assespro-mg.org.br/wp-content/uploads/2020/01/img-lixo-site-291.jpg'); /* nome da imagem */
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  filter: grayscale(100%);
+  height: 90vh;
+  z-index: 0;
+}
+
+.titulo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  gap: 20px;
+  color: var(--branco);
+  z-index: 2;
+}
+
+.titulo h1 {
+  font-size: 40px;
+}
+
+#subtitulo {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.titulo button {
+  margin: 0 auto;
+  width: 30%;
+  padding: 5px;
+  background-color: var(--verde);
+  border: none;
+  border-radius: 20px;
+}
+
+.titulo button a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.titulo i {
+  color: var(--branco);
+}
+
+/*---------------------------------------------*/
+
+#sobre {
+  background-color: var(--branco);
+  padding: 60px 20px 60px 20px;
+}
+
+.containerSobre {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tituloSobre {
+  margin-bottom: 20px;
+}
+
+.tituloSobre h1 {
+  letter-spacing: 0px;
+}
+
+.textoSobre p {
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+/*---------------------------------------------*/
+
+#descarte {
+  background-color: var(--verde);
+  padding: 60px 20px 60px 20px;
+  color: var(--branco);
+}
+
+.containerDescarte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tituloDescarte h1 {
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.listaDescarte {
+  margin-top: 40px;
+}
+
+.listaDescarte ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.listaDescarte ul li {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+/*---------------------------------------------*/
+
+#pontosDeColeta {
+  padding: 20px;
+}
+
+.tituloColeta {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.tituloColeta h1 {
+  letter-spacing: 0px;
+  font-size: 34px;
+  width: 70%;
+}
+
+.subtituloColeta {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.subtituloColeta h1 {
+  width: 50%;
+  font-size: 34px;
+  letter-spacing: 0px;
+}
+
+.containerColetaCards {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: var(--verde);
+  width: 320px;
+  height: 320px;
+  max-width: 370px;
+  padding: 20px;
+  text-align: center;
+  color: var(--branco);
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 20px #00000093;
+}
+
+.card h1 {
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+.card hr {
+  border: 1px var(--branco) solid;
+}
+
+.card p {
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 5px 40px #000000d0;
+  transition: all 0.2s ease;
+  transform: scale(1.1);
+  transform: translateY(-10px);
+}
+
+/*---------------------------------------------*/
+
+.frase {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.frase h1 {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/*---------------------------------------------*/
+
+footer {
+  background-color: var(--preto);
+  padding: 20px;
+  color: var(--branco);
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div h1 {
+  font-size: 12px;
+  width: 33.33%;
+}
+
+#descarteFooter {
+  text-align: start;
+}
+
+#projeto {
+  text-align: center;
+}
+
+#ano {
+  text-align: end;
+}
+
+/*----------------Waves Container----------------*/
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -6s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -13s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.waves {
+  display: block;
+  width: 100%;
+  height: 110px;
+  margin-top: -0px;
+  margin-bottom: 0;
+}
+
+.wave-container svg {
+  background-color: var(--branco);
+}
+
+/*-----------------------------------------------*/
+/*----------------Waves Container 2--------------*/
+
+.parallax2 > use {
+  animation: move-forever 20s cubic-bezier(0.5, 0.45, 0.4, 0.6) infinite;
+}
+.parallax2 > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax2 > use:nth-child(2) {
+  animation-delay: -6s;
+  animation-duration: 10s;
+}
+.parallax2 > use:nth-child(3) {
+  animation-delay: -13s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.waves2 {
+  display: block;
+  width: 100%;
+  height: 110px;
+  margin-top: -0px;
+  margin-bottom: 0;
+}
+
+.wave-container2 svg {
+  background-color: var(--verde);
+}
+
+/*-----------------------------------------------*/
+
+/*-----------------  PC  -------------------*/
+
+@media screen and (min-width: 1440px) {
+  .opções {
+    width: auto;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  #inicio {
+    height: 100vh;
+    padding-top: 200px;
+  }
+
+  .fundo {
+    height: 100vh;
+  }
+
+  .titulo h1 {
+    font-size: 100px;
+  }
+
+  .titulo {
+    width: 95%;
+  }
+
+  #subtitulo {
+    font-size: 30px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .titulo button {
+    width: 15%;
+  }
+
+  .titulo button a {
+    font-size: 24px;
+  }
+
+  .titulo i {
+    font-size: 24px;
+  }
+
+  /*-----------------------------------------*/
+
+  #sobre {
+    padding: 80px;
+    padding-bottom: 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .op1 {
+    width: 50%;
+  }
+
+  .op2 {
+    width: 50%;
+  }
+
+  .containerSobre {
+    flex-direction: row;
+  }
+
+  .tituloSobre {
+    font-size: 30px;
+  }
+
+  .textoSobre {
+    font-size: 30px;
+  }
+
+  /*-----------------------------------------*/
+
+  #descarte {
+    padding: 80px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .containerDescarte {
+    justify-content: center;
+  }
+
+  .tituloDescarte {
+    font-size: 30px;
+  }
+
+  .listaDescarte ul li {
+    font-size: 30px;
+  }
+
+  /*-----------------------------------------*/
+
+  #pontosDeColeta {
+    height: 90vh;
+    padding: 80px;
+  }
+
+  .tituloColeta h1 {
+    font-size: 50px;
+  }
+
+  .subtituloColeta h1 {
+    font-size: 50px;
+  }
+
+  .containerColetaCards {
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 80px;
+  }
+
+  .frase {
+    font-size: 30px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+  }
+
+  .card {
+    max-width: none;
+    width: 400px;
+    height: 400px;
+  }
+
+  .card h1 {
+    font-size: 40px;
+  }
+
+  .card p {
+    font-size: 32px;
+  }
+
+  /*-----------------------------------------*/
+
+  footer div h1 {
+    font-size: 20px;
+  }
+
+  /*-----------------------------------------*/
+  .waves2 {
+    display: block;
+    width: 100%;
+    height: 190px;
+    margin-top: -0px;
+    margin-bottom: 0;
+  }
+
+  .waves {
+    display: block;
+    width: 100%;
+    height: 190px;
+    margin-top: -0px;
+    margin-bottom: 0;
+  }
+}
