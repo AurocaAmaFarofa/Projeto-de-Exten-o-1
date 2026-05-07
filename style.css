@@ -536,6 +536,7 @@ footer div h1 {
   .card {
     max-width: none;
     width: 400px;
+    max-width: 400px;
     height: 400px;
   }
 
