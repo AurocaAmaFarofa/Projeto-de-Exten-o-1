@@ -261,7 +261,9 @@ header {
 .card {
   flex: 1 1 300px;
   width: 100%;
+  min-width: 350px;
   max-width: 350px;
+  max-height: 350px;
   aspect-ratio: 1 / 1;
   border-radius: 20px;
   background-color: var(--verde);
@@ -286,7 +288,7 @@ header {
   font-weight: 600;
   letter-spacing: 0px;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(14px, 7vw, 45px);
+  font-size: clamp(20px, 7vw, 32px);
   margin-top: 15px;
   line-height: 1.5;
 }
@@ -429,6 +431,62 @@ footer div h1 {
 
 /*-----------------------------------------------*/
 
+/*-----------------  Tablet  -------------------*/
+
+@media screen and (min-width: 768px) {
+  .opções {
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /*-----------------------------------------*/
+
+  .titulo h1 {
+    font-size: 50px;
+  }
+
+  #subtitulo {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  /*-----------------------------------------*/
+
+  #sobre {
+    padding: 80px;
+  }
+
+  .tituloSobre {
+    font-size: 22px;
+  }
+
+  .textoSobre {
+    font-size: 27px;
+  }
+
+  /*-----------------------------------------*/
+
+  #descarte {
+    padding: 80px;
+  }
+
+  .tituloDescarte {
+    font-size: 30px;
+  }
+
+  .listaDescarte ul li {
+    font-size: 30px;
+  }
+
+  /*-----------------------------------------*/
+
+  .card p {
+    font-size: 30px;
+  }
+}
+
 /*-----------------  PC  -------------------*/
 
 @media screen and (min-width: 1440px) {
@@ -529,7 +587,6 @@ footer div h1 {
   /*-----------------------------------------*/
 
   #pontosDeColeta {
-    height: 90vh;
     padding: 80px;
   }
 
@@ -559,6 +616,7 @@ footer div h1 {
     max-width: none;
     width: 400px;
     max-width: 400px;
+    max-height: 400px;
     height: 400px;
   }
 
