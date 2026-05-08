@@ -230,78 +230,82 @@ header {
   padding: 20px;
 }
 
-.tituloColeta {
-  display: flex;
-  justify-content: flex-end;
-  text-align: end;
-  margin-bottom: 30px;
-}
-
-.tituloColeta h1 {
-  letter-spacing: 0px;
-  font-size: clamp(30px, 5vw, 34px);
-}
-
 .subtituloColeta {
   display: flex;
-  justify-content: flex-start;
-  text-align: start;
+  justify-content: center;
+  text-align: center;
 }
 
 .subtituloColeta h1 {
-  width: 50%;
+  width: 100%;
   font-size: clamp(30px, 5vw, 34px);
   letter-spacing: 0px;
 }
 
-.containerColetaCards {
+.containerCarrossel {
   margin: 30px auto;
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
   width: 90%;
 }
 
-.card {
-  flex: 1 1 300px;
-  width: 100%;
-  min-width: 350px;
-  max-width: 350px;
-  max-height: 350px;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
-  background-color: var(--verde);
-  padding: 20px;
+.nomeLugarCarrossel h1 {
   text-align: center;
+  font-size: clamp(10px, 3vw, 20px);
+  letter-spacing: 2px;
+}
+
+.carrossel {
+  display: flex;
+  justify-content: space-around;
+  min-height: 20vh;
+}
+
+.nextButton {
+  padding: 10px;
+  height: 4vh;
+  margin: auto 0;
+  border: none;
+  font-size: 20px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
   color: var(--branco);
-  transition: all 0.2s ease;
-  box-shadow: 0 5px 20px #00000093;
+  background-color: var(--verde-escuro);
 }
 
-.card h1 {
-  letter-spacing: 0px;
-  margin-bottom: 10px;
-  font-size: clamp(20px, 7vw, 30px);
+.prevButton {
+  padding: 10px;
+  height: 4vh;
+  margin: auto 0;
+  border: none;
+  font-size: 20px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  color: var(--branco);
+  background-color: var(--verde-escuro);
 }
 
-.card hr {
-  border: 1px var(--branco) solid;
+.carrosselDentro {
+  background-color: var(--verde-escuro);
+  width: 100%;
+  max-width: 50vw;
+  min-width: 200px;
 }
 
-.card p {
-  font-weight: 600;
-  letter-spacing: 0px;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(20px, 7vw, 32px);
-  margin-top: 15px;
-  line-height: 1.5;
-}
-
-.card:hover {
-  box-shadow: 0 5px 40px #000000d0;
-  transform: scale(1.03) translateY(-10px);
+.botaoLocalização {
+  border: none;
+  border-radius: 50px;
+  background-color: var(--verde-escuro);
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: clamp(10px, 3vw, 20px);
+  padding: 10px;
+  color: var(--branco);
+  max-width: 180px;
 }
 
 /*---------------------------------------------*/
@@ -485,12 +489,6 @@ footer div h1 {
   .listaDescarte ul li {
     font-size: 30px;
   }
-
-  /*-----------------------------------------*/
-
-  .card p {
-    font-size: 30px;
-  }
 }
 
 /*-----------------  PC  -------------------*/
@@ -604,7 +602,7 @@ footer div h1 {
     font-size: 50px;
   }
 
-  .containerColetaCards {
+  .containerCarrossel {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 80px;
@@ -616,22 +614,6 @@ footer div h1 {
     font-size: 30px;
     background-color: var(--verde-escuro);
     color: var(--branco);
-  }
-
-  .card {
-    max-width: none;
-    width: 400px;
-    max-width: 400px;
-    max-height: 400px;
-    height: 400px;
-  }
-
-  .card h1 {
-    font-size: 40px;
-  }
-
-  .card p {
-    font-size: 32px;
   }
 
   /*-----------------------------------------*/
