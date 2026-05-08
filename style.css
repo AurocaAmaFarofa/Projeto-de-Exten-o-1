@@ -117,27 +117,33 @@ header {
   letter-spacing: 1px;
 }
 
-.titulo button {
+.titulo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  width: 30%;
-  padding: 5px;
+  text-decoration: none;
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.titulo a button {
+  color: var(--branco);
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
   background-color: var(--verde-escuro);
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 
-.titulo button a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: var(--branco);
-  text-decoration: none;
-}
-
-.titulo i {
+.titulo a i {
+  padding-top: 30px;
   color: var(--branco);
 }
 
-.titulo i {
+.titulo a i {
   animation: subirDescer 1.5s infinite;
 }
 
