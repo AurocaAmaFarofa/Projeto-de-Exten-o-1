@@ -12,11 +12,12 @@
   --verde-escuro: #365a42;
   --verde-muito-escuro: #1e3024;
   --branco: white;
+  --cinza: #d3d3d3;
   --preto: black;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   letter-spacing: 5px;
   /*font-style: italic;*/
   text-transform: uppercase;
@@ -72,6 +73,10 @@ header {
   color: var(--branco);
 }
 
+.opções a:hover {
+  color: var(--cinza);
+}
+
 /*---------------------------------------------*/
 
 #inicio {
@@ -84,7 +89,7 @@ header {
 }
 
 .fundo {
-  background-image: url('https://www.assespro-mg.org.br/wp-content/uploads/2020/01/img-lixo-site-291.jpg'); /* nome da imagem */
+  background-image: url("https://www.assespro-mg.org.br/wp-content/uploads/2020/01/img-lixo-site-291.jpg"); /* nome da imagem */
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -138,6 +143,10 @@ header {
   cursor: pointer;
 }
 
+.titulo a button:hover {
+  background-color: var(--verde-muito-escuro);
+}
+
 .titulo a i {
   padding-top: 30px;
   color: var(--branco);
@@ -185,7 +194,7 @@ header {
 .textoSobre p {
   font-weight: 600;
   letter-spacing: 0px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 /*---------------------------------------------*/
@@ -221,7 +230,7 @@ header {
   font-size: clamp(10px, 5vw, 20px);
   font-weight: 600;
   letter-spacing: 0px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 /*---------------------------------------------*/
@@ -242,70 +251,146 @@ header {
   letter-spacing: 0px;
 }
 
-.containerCarrossel {
+.container-carrossel {
   margin: 30px auto;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   width: 90%;
+  max-width: 720px;
+  align-items: center;
 }
 
-.nomeLugarCarrossel h1 {
+.titulo-carrossel {
+  width: 100%;
+  min-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.titulo-carrossel h1 {
+  margin: 0;
   text-align: center;
-  font-size: clamp(10px, 3vw, 20px);
-  letter-spacing: 2px;
+  font-size: clamp(20px, 4vw, 28px);
+  letter-spacing: 1px;
+  line-height: 1.2;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .carrossel {
   display: flex;
-  justify-content: space-around;
-  min-height: 20vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
 }
 
-.nextButton {
+.botao-anterior,
+.botao-proximo {
   padding: 10px;
-  height: 4vh;
-  margin: auto 0;
+  width: 100%;
+  max-width: 40px;
   border: none;
-  font-size: 20px;
-  aspect-ratio: 1 / 1;
-  border-radius: 100%;
-  color: var(--branco);
   background-color: var(--verde-escuro);
+  color: var(--branco);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20%;
 }
 
-.prevButton {
-  padding: 10px;
-  height: 4vh;
-  margin: auto 0;
-  border: none;
-  font-size: 20px;
-  aspect-ratio: 1 / 1;
-  border-radius: 100%;
-  color: var(--branco);
-  background-color: var(--verde-escuro);
-}
-
-.carrosselDentro {
+.area-carrossel {
   background-color: var(--verde-escuro);
   width: 100%;
-  max-width: 50vw;
-  min-width: 200px;
+  max-width: 560px;
+  padding: 15px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
 }
 
-.botaoLocalização {
+.imagem-carrossel {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.botao-localizacao {
+  font-family: "Playfair Display", serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   background-color: var(--verde-escuro);
   cursor: pointer;
   margin: 0 auto;
-  font-size: clamp(10px, 3vw, 20px);
-  padding: 10px;
+  font-size: clamp(16px, 3vw, 18px);
+  padding: 12px;
   color: var(--branco);
-  max-width: 180px;
+  max-width: 240px;
+  text-decoration: none;
+}
+
+.botao-localizacao:hover,
+.botao-anterior:hover,
+.botao-proximo:hover {
+  opacity: 0.92;
+}
+
+@media screen and (min-width: 768px) {
+  .carrossel {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .botao-anterior,
+  .botao-proximo {
+    width: auto;
+    min-width: 40px;
+    font-size: 18px;
+  }
+
+  .area-carrossel {
+    max-width: 640px;
+    min-height: 320px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-carrossel {
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .area-carrossel {
+    max-width: 760px;
+    min-height: 420px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-carrossel {
+    max-width: 980px;
+  }
+
+  .carrossel {
+    gap: 24px;
+  }
+
+  .area-carrossel {
+    padding: 14px;
+    max-width: 840px;
+    min-height: 480px;
+  }
 }
 
 /*---------------------------------------------*/
@@ -325,7 +410,7 @@ header {
   letter-spacing: 1px;
 }
 
-/*---------------------------------------------*/
+/*---------------  FOOTER  -------------------*/
 
 footer {
   background-color: var(--preto);
@@ -349,7 +434,7 @@ footer div h1 {
 }
 
 #descarteFooter {
-  text-align: left;
+  font-size: clamp(20px, 5vw, 30px);
 }
 
 #projeto {
@@ -594,20 +679,8 @@ footer div h1 {
     padding: 80px;
   }
 
-  .tituloColeta h1 {
-    font-size: 50px;
-  }
-
   .subtituloColeta h1 {
     font-size: 50px;
-  }
-
-  .containerCarrossel {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 80px;
-    margin-top: 80px;
-    width: auto;
   }
 
   .frase {

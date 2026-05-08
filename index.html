@@ -153,18 +153,31 @@
         <div class="subtituloColeta">
           <h1>Onde descartar?</h1>
         </div>
-        <div class="containerCarrossel">
-          <div class="nomeLugarCarrossel">
-            <h1>Secretaria Municipal de Meio Ambiente de Francisco Beltrão</h1>
+        <div class="container-carrossel">
+          <div class="titulo-carrossel">
+            <h1 id="slideTitle">
+              Secretaria Municipal de Meio Ambiente de Francisco Beltrão
+            </h1>
           </div>
           <div class="carrossel">
-            <button class="prevButton"><</button>
-            <div class="carrosselDentro">
-              <img src="" alt="" />
+            <button class="botao-anterior" type="button"><</button>
+            <div class="area-carrossel">
+              <img
+                id="imagemCarrossel"
+                class="imagem-carrossel"
+                src=""
+                alt="Imagem do ponto de coleta"
+              />
             </div>
-            <button class="nextButton">></button>
+            <button class="botao-proximo" type="button">></button>
           </div>
-          <button class="botaoLocalização">Ver Localização</button>
+          <a
+            id="botao-localizacao"
+            class="botao-localizacao"
+            target="_blank"
+            rel="noopener"
+            >Saiba Mais</a
+          >
         </div>
       </div>
       <div class="frase">
@@ -174,9 +187,50 @@
     <footer>
       <div>
         <h1 id="descarteFooter">Descarte consciente</h1>
-        <h1 id="projeto">projeto de extenção</h1>
-        <h1 id="ano">2026</h1>
+        <div class="footer1">
+          <div class="projetoAno">
+            <h1 id="projeto">projeto de extenção</h1>
+            <h1 id="ano">2026</h1>
+          </div>
+          <div class="linksFooter">
+            <a href="https://www.unipar.br/unidades/francisco-beltrao/campus-i/"
+              >Unipar.com.br<i class="fa-solid fa-globe"></i
+            ></a>
+            <a href="https://www.instagram.com/uniparfb/"
+              >Intagram<i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/uniparbeltrao/"
+              >Facebook<i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+        <div class="projetoFeito">
+          <h1>PROJETO FEITO POR</h1>
+          <ul>
+            <li>Marcos Cauê Maria</li>
+            <li>Hermogenes José Pereira</li>
+            <li>Luís Antonio Manfredi Sodré</li>
+            <li>Maria Helena Ragonha Piccoli</li>
+            <li>Leonardo Fardo Massoline</li>
+            <li>Gustavo Emanuel Breier Antunes</li>
+            <li>Felipe Bertol Capelina</li>
+            <li>Aurick jullian dutra</li>
+            <li>natalia bochio campestrini</li>
+          </ul>
+        </div>
+        <div class="siteFeitoPor">
+          <ul>
+            <li>Aurick jullian dutra</li>
+            <li>Hermogenes José Pereira</li>
+            <li>Marcos Cauê Maria</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="direitosAutorais">
+          <h1>Todos os direitos reservados à © Grupo3</h1>
+        </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
