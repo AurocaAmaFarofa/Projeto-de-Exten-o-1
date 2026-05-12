@@ -17,7 +17,7 @@
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   letter-spacing: 5px;
   /*font-style: italic;*/
   text-transform: uppercase;
@@ -89,7 +89,7 @@ header {
 }
 
 .fundo {
-  background-image: url("https://www.assespro-mg.org.br/wp-content/uploads/2020/01/img-lixo-site-291.jpg"); /* nome da imagem */
+  background-image: url('https://www.assespro-mg.org.br/wp-content/uploads/2020/01/img-lixo-site-291.jpg'); /* nome da imagem */
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -194,7 +194,7 @@ header {
 .textoSobre p {
   font-weight: 600;
   letter-spacing: 0px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /*---------------------------------------------*/
@@ -230,7 +230,7 @@ header {
   font-size: clamp(10px, 5vw, 20px);
   font-weight: 600;
   letter-spacing: 0px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /*---------------------------------------------*/
@@ -322,7 +322,7 @@ header {
 }
 
 .botao-localizacao {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -413,81 +413,158 @@ header {
 /*---------------  FOOTER  -------------------*/
 
 footer {
-  background-color: var(--preto);
-  padding: 20px;
-  color: var(--branco);
-}
+  background-color: #000;
+  color: white;
 
-footer div {
+  padding: 40px 20px 20px;
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
 }
 
 #descarteFooter {
-  align-items: start;
-  font-size: clamp(20px, 5vw, 30px);
-  letter-spacing: 1px;
-  padding-bottom: 20px;
+  font-size: clamp(24px, 6vw, 40px);
+
+  letter-spacing: 2px;
+
+  text-align: center;
 }
+
+/* ------------------------------------------------ */
 
 .footer {
   display: flex;
   flex-direction: column;
+
+  gap: 40px;
 }
 
-.footer1 {
+/* ------------------------------------------------ */
+
+.foootter {
   display: flex;
   flex-direction: column;
+
+  gap: 40px;
 }
 
-.projetoAno {
-  display: flex;
-  justify-content: center;
-}
+/* ------------------------------------------------ */
 
-.linksFooter {
-  display: flex;
-  flex-direction: column;
-}
-
-.linksFooter a {
-  text-decoration: none;
-  color: var(--branco);
-}
-
-.linksFooter i {
-  padding-left: 5px;
-}
-
+.footer1,
 .projetoFeito,
 .siteFeitoPor {
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+
+  text-align: center;
 }
 
+/* ------------------------------------------------ */
+
+.projetoAno {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+#projeto,
+#ano,
+.projetoFeito h1,
+.siteFeitoPor h1 {
+  font-size: clamp(14px, 3vw, 22px);
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+.linksFooter {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.linksFooter a {
+  color: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+
+  font-size: clamp(14px, 3vw, 18px);
+
+  transition: 0.2s ease;
+}
+
+.linksFooter a:hover {
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+.linksFooter i {
+  padding-left: 8px;
+}
+
+/* ------------------------------------------------ */
+
+.projetoFeito ul,
+.siteFeitoPor ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 0;
+}
+
+.projetoFeito li,
+.siteFeitoPor li {
+  list-style: none;
+
+  font-size: clamp(13px, 3vw, 17px);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------ */
+
 .footer hr {
+  border: none;
+
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+
   width: 100%;
 }
 
+/* ------------------------------------------------ */
+
+.direitosAutorais {
+  display: flex;
+  justify-content: center;
+}
+
 .direitosAutorais h1 {
-  font-size: clamp(10px, 3vw, 20px);
+  font-size: clamp(10px, 2vw, 16px);
+
   text-align: center;
-}
 
-.descarte #descarteFooter {
-  font-size: clamp(20px, 5vw, 30px);
-}
+  letter-spacing: 4px;
 
-#projeto {
-  text-align: center;
-}
-
-#ano {
-  text-align: right;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*----------------Waves Container----------------*/
@@ -527,10 +604,22 @@ footer div {
 
 .wave-container svg {
   background-color: var(--branco);
+  display: block;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
+.wave-container {
+  line-height: 0;
+  overflow: hidden;
 }
 
 /*-----------------------------------------------*/
 /*----------------Waves Container 2--------------*/
+
+.wave-container2 {
+  background-color: var(--verde);
+}
 
 .parallax2 > use {
   animation: move-forever 20s cubic-bezier(0.5, 0.45, 0.4, 0.6) infinite;
@@ -619,6 +708,37 @@ footer div {
   .listaDescarte ul li {
     font-size: 30px;
   }
+
+  /*----------------------------------------*/
+
+  footer {
+    padding: 60px 40px 30px;
+  }
+
+  #descarteFooter {
+    text-align: left;
+  }
+
+  .foootter {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .footer1,
+  .projetoFeito,
+  .siteFeitoPor {
+    width: 33%;
+  }
+
+  .projetoFeito ul,
+  .siteFeitoPor ul {
+    gap: 10px;
+  }
 }
 
 /*-----------------  PC  -------------------*/
@@ -672,7 +792,7 @@ footer div {
   #sobre {
     padding: 80px;
     padding-bottom: 0;
-    height: 70vh;
+    height: 800px;
     display: flex;
     align-items: center;
   }
@@ -701,7 +821,7 @@ footer div {
 
   #descarte {
     padding: 80px;
-    height: 70vh;
+    height: 600px;
     display: flex;
     justify-content: center;
   }
@@ -736,8 +856,21 @@ footer div {
 
   /*-----------------------------------------*/
 
-  footer div h1 {
-    font-size: 20px;
+  footer {
+    padding: 80px 80px 30px;
+  }
+
+  .foootter {
+    gap: 80px;
+  }
+
+  .projetoFeito li,
+  .siteFeitoPor li {
+    font-size: 18px;
+  }
+
+  .linksFooter a {
+    font-size: 18px;
   }
 
   /*-----------------------------------------*/
